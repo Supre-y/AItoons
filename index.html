@@ -5,8 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AITOONS - Traduções de Mangás por IA</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Bangers', cursive;
+            background-color: #f2f2f2;
+            position: relative;
+        }
+
+        .crime-scene {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: yellow;
+            color: black;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 15px 0;
+            z-index: 999;
+            animation: move 5s infinite linear;
+        }
+
+        .crime-scene:nth-child(even) {
+            animation-duration: 6s;
+            animation-delay: 2s;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Restante do seu CSS */
+    </style>
 </head>
 <body>
+    <!-- Faixas amarelas -->
+    <div class="crime-scene">Stay Away! Otaku Working...</div>
+    <div class="crime-scene">Stay Away! Otaku Working...</div>
+    <div class="crime-scene">Stay Away! Otaku Working...</div>
+
     <!-- Cabeçalho -->
     <header>
         <div class="header-content">
@@ -47,19 +94,10 @@
         <p>© 2024 AITOONS - Traduções de Mangás Feitas por IA</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        window.onload = function() {
+            alert("Bem-vindo ao AItoons! Aproveite as traduções de manhwas feitas por IA!");
+        };
+    </script>
 </body>
 </html>
-<head>
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-</head>
-<body style="font-family: 'Bangers', cursive;">
-
-    <img src="chibi-icon.png" alt="Personagem chibi" style="width: 100px; height: 100px;">
-
-    <script>
-  window.onload = function() {
-    alert("Bem-vindo ao AItoons! Aproveite as traduções de manhwas feitas por IA!");
-  };
-</script>
-
