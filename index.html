@@ -4,78 +4,59 @@
         background-color: #d3d3d3; /* Cinza suave para o fundo */
         position: relative;
         color: #333; /* Texto em tom escuro para contraste */
+        margin: 0;
+        padding-top: 60px; /* Ajuste para garantir que o conteúdo não fique escondido atrás da faixa */
     }
 
-    header {
-        background-color: #333; /* Preto suave para o fundo da logo */
-        color: white;
-    }
-
-    .header-content h1 {
-        font-size: 3em;
-    }
-
-    .header-content p {
-        font-size: 1.2em;
-    }
-
+    /* Faixa amarela em diagonal, atrás do conteúdo */
     .crime-scene {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
+        top: 70px;
+        left: -150px;
+        width: 300%;
         background-color: yellow;
         color: black;
         text-align: center;
         font-size: 30px;
         font-weight: bold;
         padding: 15px 0;
-        z-index: 999;
-        animation: move 5s infinite linear;
+        transform: rotate(-45deg);
+        z-index: -1;
     }
 
-    .crime-scene:nth-child(even) {
-        animation-duration: 6s;
-        animation-delay: 2s;
+    .crime-scene:nth-child(2) {
+        top: 150px; /* Distância para a segunda faixa */
     }
 
-    @keyframes move {
-        0% {
-            transform: translateX(-100%);
-        }
-        50% {
-            transform: translateX(100%);
-        }
-        100% {
-            transform: translateX(-100%);
-        }
+    .crime-scene:nth-child(3) {
+        top: 230px; /* Distância para a terceira faixa */
     }
 
-    footer {
-        text-align: center;
-        padding: 20px;
+    /* Cabeçalho */
+    header {
         background-color: #333;
         color: white;
-    }
-
-    nav {
-        background-color: #555; /* Cinza escuro para o menu */
-    }
-
-    nav ul {
-        list-style-type: none;
-        padding: 0;
+        padding: 20px 0;
         text-align: center;
     }
 
-    nav ul li {
-        display: inline;
-        margin: 10px;
-    }
-
-    nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.2em;
-    }
+    /* Restante do seu CSS */
 </style>
+
+<body>
+    <!-- Faixas amarelas -->
+    <div class="crime-scene">Stay Away! Otaku Working...</div>
+    <div class="crime-scene">Stay Away! Otaku Working...</div>
+    <div class="crime-scene">Stay Away! Otaku Working...</div>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="header-content">
+            <h1>AITOONS</h1>
+            <p>Traduções de Mangás Feitas por IA</p>
+        </div>
+    </header>
+
+    <!-- Conteúdo do site continua aqui -->
+</body>
+
