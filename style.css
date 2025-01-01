@@ -8,16 +8,16 @@
 /* Estilos gerais */
 body {
     font-family: 'Bangers', cursive;
-    background-color: #f2f2f2; /* Fundo cinza claro */
-    color: white; /* Texto branco para facilitar a leitura */
+    background-color: #f2f2f2;
+    color: white;
     position: relative;
     margin: 0;
-    padding-top: 60px; /* Para ajustar o conteúdo abaixo do cabeçalho */
+    padding-top: 60px;
 }
 
 /* Cabeçalho */
 header {
-    background-color: #000; /* Cabeçalho preto */
+    background-color: #000;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -35,9 +35,11 @@ header p {
 
 /* Menu de navegação */
 nav {
-    background-color: #444; /* Menu cinza escuro */
+    background-color: #444;
     padding: 10px 0;
     text-align: center;
+    z-index: 1;
+    position: relative;
 }
 
 nav ul {
@@ -76,7 +78,7 @@ nav ul li a:hover {
 button {
     padding: 10px 20px;
     font-size: 1em;
-    background-color: #7c6fc7; /* Roxo pastel */
+    background-color: #7c6fc7;
     color: white;
     border: none;
     cursor: pointer;
@@ -126,4 +128,39 @@ footer {
 
 body {
     animation: slide 1s ease-in-out;
+}
+
+/* Responsividade - Ajustes para telas pequenas */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding-top: 50px; /* Ajusta a posição do conteúdo em telas menores */
+    }
+
+    nav ul {
+        padding: 0;
+        text-align: left;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .manga-viewer img {
+        max-width: 100%; /* Ajusta a largura da imagem do mangá */
+    }
+
+    footer {
+        position: relative;
+        padding: 20px;
+    }
+
+    #search-bar {
+        width: 90%; /* Aumenta a largura da barra de pesquisa em telas pequenas */
+    }
+
+    button {
+        padding: 15px 30px; /* Aumenta o tamanho do botão em telas menores */
+    }
 }
