@@ -107,3 +107,17 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+body {
+  background-color: #f2f2f2; /* cor de fundo suave */
+  color: #333; /* cor do texto */
+}
+
+header {
+  background-color: #ff69b4; /* rosa vibrante */
+}
+
+button {
+  background-color: #7c6fc7; /* roxo pastel */
+  color: white;
+}
