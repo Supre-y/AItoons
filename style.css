@@ -121,3 +121,19 @@ button {
   background-color: #7c6fc7; /* roxo pastel */
   color: white;
 }
+
+/* Animação para transição de página */
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  animation: slide 1s ease-in-out;
+}
