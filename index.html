@@ -1,54 +1,120 @@
 <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     body {
         font-family: 'Bangers', cursive;
-        background-color: #d3d3d3; /* Cinza suave para o fundo */
+        background-color: #f2f2f2;
+        color: white;
         position: relative;
-        color: #333; /* Texto em tom escuro para contraste */
         margin: 0;
-        padding-top: 60px; /* Ajuste para garantir que o conteúdo não fique escondido atrás da faixa */
-    }
-
-    /* Faixa amarela em diagonal, atrás do conteúdo */
-    .crime-scene {
-        position: absolute;
-        top: 70px;
-        left: -150px;
-        width: 300%;
-        background-color: yellow;
-        color: black;
-        text-align: center;
-        font-size: 30px;
-        font-weight: bold;
-        padding: 15px 0;
-        transform: rotate(-45deg);
-        z-index: -1;
-    }
-
-    .crime-scene:nth-child(2) {
-        top: 150px; /* Distância para a segunda faixa */
-    }
-
-    .crime-scene:nth-child(3) {
-        top: 230px; /* Distância para a terceira faixa */
+        padding-top: 60px;
     }
 
     /* Cabeçalho */
     header {
-        background-color: #333;
+        background-color: #000;
         color: white;
-        padding: 20px 0;
         text-align: center;
+        padding: 20px 0;
     }
 
-    /* Restante do seu CSS */
+    header h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+    header p {
+        margin-top: 5px;
+        font-size: 1.2em;
+    }
+
+    /* Menu de navegação */
+    nav {
+        background-color: #444;
+        padding: 15px 0;
+        text-align: center;
+        z-index: 1;
+        position: relative;
+    }
+
+    nav ul {
+        list-style-type: none;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 20px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2em;
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    /* Barra de Pesquisa */
+    .search-section {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    #search-bar {
+        padding: 10px;
+        font-size: 1.1em;
+        width: 70%;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1.1em;
+        background-color: #7c6fc7;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #555;
+    }
+
+    /* Leitor de Mangá */
+    .manga-viewer {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .manga-viewer img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .navigation {
+        margin-top: 20px;
+    }
+
+    /* Rodapé */
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
 </style>
 
 <body>
-    <!-- Faixas amarelas -->
-    <div class="crime-scene">Stay Away! Otaku Working...</div>
-    <div class="crime-scene">Stay Away! Otaku Working...</div>
-    <div class="crime-scene">Stay Away! Otaku Working...</div>
-
     <!-- Cabeçalho -->
     <header>
         <div class="header-content">
@@ -57,6 +123,37 @@
         </div>
     </header>
 
-    <!-- Conteúdo do site continua aqui -->
-</body>
+    <!-- Menu de Navegação -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Manhwas</a></li>
+            <li><a href="#">Últimos Capítulos</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
 
+    <!-- Seção de Pesquisa -->
+    <section class="search-section">
+        <input type="text" id="search-bar" placeholder="Pesquisar Manhwa..." />
+        <button onclick="search()">Pesquisar</button>
+    </section>
+
+    <!-- Leitor de Mangá -->
+    <div class="manga-viewer">
+        <h2>Capítulo 1</h2>
+        <img src="capitulo1/1.jpg" id="manga-page" alt="Página 1">
+        <div class="navigation">
+            <button onclick="prevPage()">Anterior</button>
+            <button onclick="nextPage()">Próxima</button>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2024 AITOONS - Traduções de Mangás Feitas por IA</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
